@@ -1,4 +1,3 @@
-# AS2/test_sales_analysis.py
 import unittest
 from io import StringIO
 
