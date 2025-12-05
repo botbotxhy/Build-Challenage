@@ -28,99 +28,76 @@ python -m unittest test_sales_analysis.py
 ```
 
 ## Example Output
-Sales Data Analysis
+Sales Data Analysis  
 
-==================================================
- Aggregations
-==================================================
-Total Revenue: $3,600.35
-Average Order Value: $60.01
-Number of Transactions: 60
+- Aggregations  
+Total Revenue: $3,600.35  
+Average Order Value: $60.01  
+Number of Transactions: 60  
 
-==================================================
- Revenue by Region
-==================================================
-  East: $690.50
-  North: $1,059.00
-  South: $1,006.25
-  West: $844.60
+- Revenue by Region  
+  East: $690.50  
+  North: $1,059.00  
+  South: $1,006.25  
+  West: $844.60  
 
-==================================================
- Revenue by Product
-==================================================
-  Widget: $763.20
-  Gadget: $722.10
-  Gizmo: $618.25
-  Accessory: $596.45
-  Thing: $546.85
-  Doohickey: $353.50
+- Revenue by Product  
+  Widget: $763.20  
+  Gadget: $722.10  
+  Gizmo: $618.25  
+  Accessory: $596.45. 
+  Thing: $546.85  
+  Doohickey: $353.50  
 
-==================================================
- Units Sold by Product
-==================================================
-  Accessory: 184 units
-  Widget: 153 units
-  Thing: 66 units
-  Gadget: 58 units
-  Gizmo: 40 units
-  Doohickey: 17 units
+- Units Sold by Product  
+  Accessory: 184 units  
+  Widget: 153 units  
+  Thing: 66 units  
+  Gadget: 58 units  
+  Gizmo: 40 units  
+  Doohickey: 17 units  
 
-==================================================
- Top 3 Products by Revenue
-==================================================
-  1. Widget: $763.20
-  2. Gadget: $722.10
-  3. Gizmo: $618.25
 
-==================================================
- Top 3 Salespersons by Revenue
-==================================================
-  1. Charlie: $744.85
-  2. Alice: $668.20
-  3. Eva: $609.05
+- Top 3 Products by Revenue  
+  1. Widget: $763.20  
+  2. Gadget: $722.10  
+  3. Gizmo: $618.25  
 
-==================================================
- Monthly Revenue
-==================================================
-  2025-01: $1,126.50
-  2025-02: $1,246.10
-  2025-03: $1,227.75
+- Top 3 Salespersons by Revenue  
+  1. Charlie: $744.85  
+  2. Alice: $668.20  
+  3. Eva: $609.05  
 
-==================================================
- Filter Examples
-==================================================
-Sales in North region: 15 transactions, $1,059.00 revenue
-High-value sales (>$75): 15 transactions
+- Monthly Revenue  
+  2025-01: $1,126.50  
+  2025-02: $1,246.10  
+  2025-03: $1,227.75  
 
-==================================================
- Pipeline: Top Products in Each Region
-==================================================
-  North: Accessory ($233.20), Gadget ($225.30)
-  South: Widget ($338.40), Thing ($215.45)
-  East: Widget ($155.85), Gadget ($150.75)
-  West: Thing ($194.50), Gadget ($186.95)
+- Filter Examples
+Sales in North region: 15 transactions, $1,059.00 revenue  
+High-value sales (>$75): 15 transactions  
 
-==================================================
- Average Order Value by Region
-==================================================
-  East: $46.03
-  North: $70.60
-  South: $67.08
-  West: $56.31
+- Pipeline: Top Products in Each Region  
+  North: Accessory ($233.20), Gadget ($225.30)  
+  South: Widget ($338.40), Thing ($215.45)  
+  East: Widget ($155.85), Gadget ($150.75)  
+  West: Thing ($194.50), Gadget ($186.95)  
 
-==================================================
- Transaction Count by Region
-==================================================
-  East: 15 transactions
-  North: 15 transactions
-  South: 15 transactions
-  West: 15 transactions
+- Average Order Value by Region  
+  East: $46.03  
+  North: $70.60  
+  South: $67.08  
+  West: $56.31  
 
-==================================================
- Top 5 Individual Sales by Revenue
-==================================================
-  Order 1027: Gadget - 9 x $11.90 = $107.10 (Charlie, South)
-  Order 1034: Gizmo - 7 x $14.75 = $103.25 (David, West)
-  Order 1025: Accessory - 30 x $3.20 = $96.00 (Alice, North)
-  Order 1037: Gadget - 8 x $12.00 = $96.00 (Alice, North)
-  Order 1007: Widget - 20 x $4.75 = $95.00 (Alice, South)
+- Transaction Count by Region  
+  East: 15 transactions  
+  North: 15 transactions  
+  South: 15 transactions  
+  West: 15 transactions  
+
+- Top 5 Individual Sales by Revenue  
+  Order 1027: Gadget - 9 x $11.90 = $107.10 (Charlie, South)  
+  Order 1034: Gizmo - 7 x $14.75 = $103.25 (David, West)  
+  Order 1025: Accessory - 30 x $3.20 = $96.00 (Alice, North)   
+  Order 1037: Gadget - 8 x $12.00 = $96.00 (Alice, North)  
+  Order 1007: Widget - 20 x $4.75 = $95.00 (Alice, South)  
