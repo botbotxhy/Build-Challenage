@@ -2,23 +2,26 @@
 
 ## Overview
 This project implements the classic **producer–consumer pattern** to demonstrate
-safe thread synchronization and inter-thread communication.
+thread synchronization and inter-thread communication.
 
-A **Producer** thread reads data from a source container and places items into a
-shared **bounded blocking queue**. A **Consumer** thread reads from the queue and
+A **Producer** thread reads data from a source container and puts items into a
+**bounded blocking queue**. A **Consumer** thread reads from the queue and
 stores items into a destination container.
 
-The implementation explicitly demonstrates a **wait/notify-style mechanism**
-using Python’s `Lock` and `Condition`, mirroring the behavior of Java-style
-`wait()` / `notify()` synchronization.
+The implementation using Python’s `Lock` and `Condition`   
+for shows a **wait/notify-style mechanism**
+
 
 ---
 
 ## Key Concepts Demonstrated
-- **Thread synchronization**
-- **Concurrent programming**
-- **Bounded blocking queues**
+- **Thread synchronization** using locks and conditons
+- **Concurrent programming** with multi threads
+- **Bounded blocking queues** 
 - **Wait/notify mechanism** (via `Condition.wait()` / `notify()`)
+- **Thread-safe containers** for safe access
+- **Sentinel pattern** for signaling completion
+- **Timeout handle**  
 
 ---
 
@@ -27,24 +30,34 @@ using Python’s `Lock` and `Condition`, mirroring the behavior of Java-style
 ### Components
 - **`BlockingQueue`**
   - A bounded queue implemented with:
-    - `threading.Lock`
+    - `threading.Lock` for mutual exclusion
     - two `threading.Condition` objects (`not_full`, `not_empty`)
-  - `put()` blocks when the queue is full.
-  - `get()` blocks when the queue is empty.
+  - `put()` blocks if the queue is full.
+  - `get()` blocks if the queue is empty.
+  - `qsize()`, `empty()`, `full()`  for thread-safe size
+
+- **`SourceContainer`**
+- Container stores source data
+- Procide safe iteration
+- Creates internal copy to avoid external mutation
+
+- **`DestinationContainer`**
+- Provides thread-safe access
 
 - **`Producer`**
   - Reads items from `SourceContainer`.
   - Pushes items to the queue.
   - Sends a **unique sentinel** object to signal completion.
+  - Tracks count
 
 - **`Consumer`**
   - Reads items from the queue.
   - Writes items to `DestinationContainer`.
   - Stops when it receives the sentinel.
+  - Tracks count
 
 ### Sentinel Choice
 A dedicated sentinel object is used to avoid collisions with valid data values.
-This improves correctness over using a common value like `None`.
 
 ---
 
@@ -59,21 +72,21 @@ source venv/bin/activate   # macOS/Linux
 # .\venv\Scripts\activate  # Windows
 ```
 
-## Run Unit Tests
-```bash
-python -m unittest test_producer_consumer.py
+## Excution
 ```
-
-## Print Results
-```bash
 python main.py
 ```
 
-## Output
-Implement producer-consumer pattern with thread synchronization  
-Source items:      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  
-Destination items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  
-Transfer correct: True  
+## Test
+```
+python test_producer_consumer.py
+```
 
-
+## Test Cover
+- TestBlockingQueue: Queue operations, blocking behavior, timeouts
+- TestSourceContainer: Initialization, isolation, iteration
+- TestDestinationContainer: Thread-safe operations
+- TestProducerConsumer: Single producer-consumer scenarios
+- TestStress: Large data transfers, minimal queues, rapid cycles
+- TestSentinel: Sentinel uniqueness and identity checks
 
