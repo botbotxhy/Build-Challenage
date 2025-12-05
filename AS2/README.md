@@ -29,17 +29,20 @@ A synthetic dataset `sample_sales.csv` is included.
 ## Setup
 From the project root:
 
-bash
+```bash
 cd AS2
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 # .\venv\Scripts\activate  # Windows
 python -m unittest test_sales_analysis.py 
+```
 
 ## Run Analysis
+```bash
 python main.py
+```
 
-## Sample Output
+## Output
 === AS2 Sales Analysis ===
 Loaded records: 60
 
