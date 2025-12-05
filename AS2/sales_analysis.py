@@ -1,4 +1,3 @@
-# sales_analysis.py
 import csv
 from dataclasses import dataclass
 from datetime import datetime
