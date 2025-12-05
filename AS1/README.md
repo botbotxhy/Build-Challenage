@@ -73,3 +73,14 @@ python test_producer_consumer.py
 - TestStress
 - TestSentinel
 
+## Example Output
+============================================================
+Implement producer-consumer pattern with thread synchronization
+============================================================
+Queue capacity:      3
+Source items:        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Destination items:   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Items produced:      10
+Items consumed:      10
+Transfer correct:    True
+============================================================
