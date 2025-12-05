@@ -57,3 +57,23 @@ cd AS1
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 # .\venv\Scripts\activate  # Windows
+```
+
+## Run Unit Tests
+```bash
+python -m unittest test_producer_consumer.py
+```
+
+## Print Results
+```bash
+python main.py
+```
+
+## Output
+Implement producer-consumer pattern with thread synchronization  
+Source items:      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  
+Destination items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  
+Transfer correct: True  
+
+
+
