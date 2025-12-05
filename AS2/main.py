@@ -1,4 +1,3 @@
-# AS2/main.py
 from pathlib import Path
 from sales_analysis import (
     load_sales_records,
