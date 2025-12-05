@@ -1,4 +1,3 @@
-# producer_consumer.py
 import threading
 from typing import Any, List
 
