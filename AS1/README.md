@@ -1,27 +1,15 @@
 # AS1 - Producer–Consumer with Thread Synchronization (Python)
 
 ## Overview
-This project implements the classic **producer–consumer pattern** to demonstrate
-thread synchronization and inter-thread communication.
+This project implements the producer-consumer problem for threading/concurrency project.
 
-A **Producer** thread reads data from a source container and puts items into a
-**bounded blocking queue**. A **Consumer** thread reads from the queue and
-stores items into a destination container.
+Two threads running at the same time:
+- Produces data
+- Consumes data
 
-The implementation using Python’s `Lock` and `Condition`   
-for shows a **wait/notify-style mechanism**
-
-
----
-
-## Key Concepts Demonstrated
-- **Thread synchronization** using locks and conditons
-- **Concurrent programming** with multi threads
-- **Bounded blocking queues** 
-- **Wait/notify mechanism** (via `Condition.wait()` / `notify()`)
-- **Thread-safe containers** for safe access
-- **Sentinel pattern** for signaling completion
-- **Timeout handle**  
+These two threads share a queue in between. 
+The producer grabs items from a source list and drops them into a shared queue.  
+The consumer picks items out of that queue and stores them elsewhere. 
 
 ---
 
@@ -63,14 +51,9 @@ A dedicated sentinel object is used to avoid collisions with valid data values.
 
 ## Setup
 
-From the project root:
+- This project uses only the Python 3 standard library.
 
-```bash
-cd AS1
-python -m venv venv
-source venv/bin/activate   # macOS/Linux
-# .\venv\Scripts\activate  # Windows
-```
+---
 
 ## Excution
 ```
@@ -83,10 +66,10 @@ python test_producer_consumer.py
 ```
 
 ## Test Cover
-- TestBlockingQueue: Queue operations, blocking behavior, timeouts
-- TestSourceContainer: Initialization, isolation, iteration
-- TestDestinationContainer: Thread-safe operations
-- TestProducerConsumer: Single producer-consumer scenarios
-- TestStress: Large data transfers, minimal queues, rapid cycles
-- TestSentinel: Sentinel uniqueness and identity checks
+- TestBlockingQueue
+- TestSourceContainer
+- TestDestinationContainer
+- TestProducerConsumer
+- TestStress
+- TestSentinel
 
