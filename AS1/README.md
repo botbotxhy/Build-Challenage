@@ -1,7 +1,7 @@
 # AS1 - Producer–Consumer with Thread Synchronization (Python)
 
 ## Overview
-This project implements the producer-consumer problem for threading/concurrency project.
+This project implements the producer-consumer problem for threading/concurrency.
 
 Two threads running at the same time:
 - Produces data
