@@ -52,7 +52,7 @@ Number of Transactions: 60
   Widget: $763.20  
   Gadget: $722.10  
   Gizmo: $618.25  
-  Accessory: $596.45. 
+  Accessory: $596.45   
   Thing: $546.85  
   Doohickey: $353.50  
 
