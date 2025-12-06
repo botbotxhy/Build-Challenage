@@ -10,7 +10,7 @@ from datetime import datetime
 from functools import reduce
 from itertools import groupby
 from operator import attrgetter
-from typing import List, Dict, Tuple, TextIO, Iterator, Callable
+from typing import List, Dict, Tuple, TextIO
 
 
 @dataclass(frozen=True)

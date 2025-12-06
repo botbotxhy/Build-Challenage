@@ -26,7 +26,7 @@ The consumer picks items out of that queue and stores them elsewhere.
 
 - **`SourceContainer`**
 - Container stores source data
-- Procide safe iteration
+- Provide safe iteration
 - Creates internal copy to avoid external mutation
 
 - **`DestinationContainer`**
@@ -55,7 +55,7 @@ A dedicated sentinel object is used to avoid collisions with valid data values.
 
 ---
 
-## Excution
+## Execution
 ```
 python main.py
 ```
@@ -65,7 +65,7 @@ python main.py
 python test_producer_consumer.py
 ```
 
-## Test Cover
+## Test Coverage
 - TestBlockingQueue
 - TestSourceContainer
 - TestDestinationContainer

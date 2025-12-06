@@ -76,8 +76,8 @@ class DestinationContainer:
     Container to store processed items for consumer
     """
     def __init__(self):
+        self.items: List[Any] = []
         self._lock = threading.Lock()
-        self._items: List[Any] = []
 
     def add(self, item: Any) -> None:
         """
@@ -129,7 +129,6 @@ class Consumer(threading.Thread):
             item = self.queue.get()
             if item is self.sentinel:
                 if self.propagate_sentinel:
-                    # Re-queue sentinel for other consumers in multi-consumer setup
                     self.queue.put(self.sentinel)
                 break
             self.dest.add(item)
