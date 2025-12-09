@@ -76,7 +76,7 @@ class DestinationContainer:
     Container to store processed items for consumer
     """
     def __init__(self):
-        self.items: List[Any] = []
+        self._items: List[Any] = []
         self._lock = threading.Lock()
 
     def add(self, item: Any) -> None:
