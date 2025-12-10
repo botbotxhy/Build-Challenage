@@ -61,7 +61,6 @@ class BlockingQueue:
         with self._lock:
             return len(self._items) >= self._maxsize
 
-
 class SourceContainer:
     def __init__(self, items: List[Any]):
         self._lock = threading.Lock()
@@ -94,7 +93,6 @@ class DestinationContainer:
     def __len__(self) -> int:
         with self._lock:
             return len(self._items)
-
 
 class Producer(threading.Thread):
     def __init__(self, src: SourceContainer, queue: BlockingQueue, sentinel: Any = SENTINEL, name: Optional[str] = None):

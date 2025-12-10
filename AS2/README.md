@@ -1,7 +1,7 @@
 # AS2 - Sales Data Analysis 
 
 ## Overview
-This project analyzes sales data using functional programming techniques. Built as a learning exercise to practice `map`, `filter`, `reduce`, and `groupby` instead of traditional loops.
+This project analyzes sales data using functional programming techniques. Using  `map`, `filter`, `reduce`, and `groupby` instead of traditional loops.
 
 
 ## Dataset
